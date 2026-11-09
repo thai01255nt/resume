@@ -1,0 +1,14 @@
+# Byte-compiled / optimized / DLL files
+.idea
+.vscode
+!.vscode/launch.json
+.zed
+
+# Environments
+*.env*
+!.env.example
+*.yml
+
+.DS_Store
+
+.claude/worktrees
