@@ -1,0 +1,103 @@
+\documentclass[8.5pt,a4paper]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[margin=0.35in,top=0.35in,bottom=0.35in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{ragged2e}
+\usepackage{microtype}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=blue
+}
+\urlstyle{same}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\justifying
+
+% Section formatting - tighter spacing
+\titleformat{\section}
+    {\fontsize{9pt}{10pt}\selectfont\bfseries\uppercase}
+    {}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+
+% Experience bullet formatting
+\setlist[itemize]{
+    leftmargin=10pt,
+    itemsep=0.5pt,
+    topsep=0.5pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+
+\begin{document}
+
+% ================= HEADER =================
+\begin{center}
+    {\Large\textbf{DAO CAO THAI}} \\[2pt]
+    \fontsize{8.5pt}{10pt}\selectfont
+    Hanoi, Vietnam \;|\; 0988501897 \;|\;
+    \href{mailto:thai0125nt@gmail.com}{thai0125nt@gmail.com} \;|\;
+    \href{https://www.linkedin.com/in/}{LinkedIn}\\
+    \textbf{\href{https://github.com/your-username/cv/blob/main/CV_Full.pdf}{View Detailed / Extended CV}}
+\end{center}
+\vspace{-4pt}
+
+% ================= SUMMARY =================
+\section*{Professional Summary}
+Tech Lead \& Backend/Data Engineer with 8+ years scaling high-load systems (AaaS, FinTech, Web3) handling millions of requests. Proven track record leading engineering teams up to 10, architecting low-latency data pipelines, and enforcing strict data integrity. Strong foundation in applied math, quant finance, and systems programming (Python, Go, Java).
+
+% ================= SKILLS =================
+\section*{Technical Skills}
+\textbf{Languages:} Python, Go, Java, TypeScript, SQL, Lua\\
+\textbf{Backend \& Data:} FastAPI, Spring Boot, gRPC, PostgreSQL, Valkey/Redis, ClickHouse, DuckDB, Apache Airflow, Kafka/Event Hubs, PySpark\\
+\textbf{Cloud \& DevOps:} Azure AKS, Cloudflare Workers (Durable Objects), Docker, Kubernetes, FluxCD, OpenTofu, MinIO
+
+% ================= EXPERIENCE =================
+\section*{Professional Experience}
+
+\noindent\textbf{Venera AI} --- \textit{Tech Lead / Backend \& Data Engineer} \hfill \textit{2024 -- 2026}
+\begin{itemize}
+    \item \textbf{Venera API Hub (Tech Lead, team of 10):} Architected an enterprise AI/healthcare API platform integrated with NanoSoft HIS.
+    \item Separated Control Plane and Data Plane using \textbf{gRPC} with single-flight pattern; implemented \textbf{Valkey + Lua scripts} for sub-millisecond real-time auth, entitlements, and credit validation on the hot path.
+    \item Built asynchronous billing pipelines streaming usage metrics to \textbf{Azure Event Hubs} and \textbf{ClickHouse} via MinIO Data Lake (Parquet/Avro).
+    \item \textbf{Internal ETL Platform (Tech Lead, team of 2):} Designed an Airflow-orchestrated no-code platform utilizing DuckDB and PySpark, cutting dataset onboarding time for medical LLMs by 70\%.
+    \item \textbf{FHIR Interoperability (Tech Lead, team of 4):} Developed Java/Spring Boot services transforming national BHYT XML data into FHIR R4 resources via FML StructureMaps for hospital integration.
+\end{itemize}
+
+\vspace{2pt}
+\noindent\textbf{Weegroup} --- \textit{Backend Developer} \hfill \textit{2025 -- 2026}
+\begin{itemize}
+    \item Engineered a serverless backend on \textbf{Cloudflare Edge} (Workers, Durable Objects, KV, D1) for Telegram Mini Apps, serving ~1M global active users with zero region-bound server latency.
+    \item Utilized single-writer \textbf{Durable Objects} for atomic game-state consistency without database locks, and integrated \textbf{TON Connect} for seamless Web3 payment flows.
+    \item Implemented an asynchronous withdrawal pipeline using \textbf{RabbitMQ} to decouple blockchain finality from real-time gameplay, handling thousands of daily transactions safely.
+\end{itemize}
+
+\vspace{2pt}
+\noindent\textbf{6P Capital Management} --- \textit{Quantitative Developer \& Data Engineer} \hfill \textit{2021 -- 2025}
+\begin{itemize}
+    \item Built an end-to-end quant research platform for Vietnamese equities, ingesting real-time tick data via \textbf{SSI/VPS WebSockets} into optimized SQL Server data marts.
+    \item Developed a WorldQuant BRAIN-style DSL backed by GPU-accelerated \textbf{NumPy/CuPy} rolling-window operators, empowering researchers to run multi-period backtests 5x faster.
+    \item Integrated the \textbf{Mosek convex optimization solver} into an automated alpha combination workflow, scaling multi-alpha portfolio construction for institutional deployment.
+\end{itemize}
+
+\vspace{2pt}
+\noindent\textbf{VMO Holdings} --- \textit{Backend \& Data Engineer} \hfill \textit{2019 -- 2021}
+\begin{itemize}
+    \item Built a metadata-driven self-service Data Integration Platform for Setel (Malaysia fintech) wrapping PipelineWise and Airbyte, automating ingestion pipelines via JSON-driven Airflow DAG generation.
+\end{itemize}
+
+% ================= PROJECTS & EDUCATION =================
+\vspace{2pt}
+\section*{Key Open Source \& Education}
+\begin{itemize}
+    \item \textbf{hitl (Spec-Driven Development CLI):} Created a Claude Code orchestration CLI with 17 custom skills and a Node.js AST indexing engine to lock API contracts and prevent codebase drift.
+    \item \textbf{Education:} Foreign Trade University, Bachelor of International Business (2015 -- 2019). Focused on Applied AI/Robotics (YOLO, OpenCV, ROS, A* path planning).
+\end{itemize}
+
+\end{document}
